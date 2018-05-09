@@ -85,7 +85,7 @@ boolean Plugin_142(byte function, struct EventStruct *event, String& string)
         string += F("<TR><TD>GPIO:<TD>");
 
         string += F("<TR><TD>1st GPIO (R):<TD>");
-        addPinSelect(false, string, "taskdevicepin1", Settings.TaskDevicePluginConfig[event->TaskIndex][0]);
+        addPinSelect(false, string, "taskdevicepin1", Settings.TaskDevicePluginConfig[event->TaskIndex][0]); //something wrong here: 4 arguments instead of 3 for "addPinSelect"
         string += F("<TR><TD>2nd GPIO (G):<TD>");
         addPinSelect(false, string, "taskdevicepin2", Settings.TaskDevicePluginConfig[event->TaskIndex][1]);
         string += F("<TR><TD>3rd GPIO (B):<TD>");
